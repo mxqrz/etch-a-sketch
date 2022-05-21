@@ -1,13 +1,25 @@
+*
+{
+    margin: 0;
+    font-family: "Open Sans";
+}
+
 .wrapper
 {
     display: flex;
-    padding: 10em;
+    padding: 7em;
+    justify-content: center;
 }
 
 .inner-wrapper
 {
     flex-direction: column;
     padding: 1.5em;
+}
+
+.inner-wrapper h1
+{
+    margin-bottom: 0.5em;
 }
 
 #canvas
@@ -35,4 +47,13 @@
 {
     border: 1px solid rgb(0, 0, 0);
     background-color: rgba(255, 255, 255, 0.8);
+}
+
+footer
+{
+    text-align: center;
+    color: white;
+    font-family: "Open Sans";
+    padding: 3em;
+    background-color: rgb(199, 134, 134);
 }

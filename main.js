@@ -10,8 +10,6 @@ let color = "black";
 let rainbow = false;
 let borders = true;
 
-let colors;
-
 let genGrid = (size) =>
 {
     let n = Math.pow(size, 2);
@@ -38,6 +36,7 @@ let genGrid = (size) =>
         }
     }
 
+    showBorders();
     checkHover();
 }
 
