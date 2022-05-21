@@ -10,8 +10,6 @@ let color = "black";
 let rainbow = false;
 let borders = true;
 
-checkHover();
-
 let genGrid = (size) =>
 {
     let n = Math.pow(size, 2);
@@ -85,6 +83,8 @@ let checkHover = () =>
         })
     })
 }
+
+checkHover();
 
 color_selector.addEventListener('input', function ()
 {
