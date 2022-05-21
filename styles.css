@@ -6,14 +6,14 @@
 
 .inner-wrapper
 {
-    flex: 1;
-    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 1.5em;
 }
 
 #canvas
 {
     background-color: red;
-    flex: 0 0 40em;
+    flex: 0 0 30em;
     height: 35em;
     display: flex;
     align-items: center;
@@ -24,6 +24,14 @@
 {
     
     background-color: rgb(255, 255, 255);
-    flex: 0 0 35em;
-    height: 20em;
+    flex: 1 1 auto;
+    width: 100%;
+    display: grid;
+    grid-gap: none;
+}
+
+.item
+{
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 0.05em solid rgb(236, 236, 236);
 }
