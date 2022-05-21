@@ -1,7 +1,26 @@
 *
 {
     margin: 0;
-    font-family: "Open Sans";
+    font-family: "Roboto Slab";
+}
+
+html
+{
+    background-color: #fcf8ed;
+    overflow: hidden;
+}
+
+.wrapper {
+    animation: fade ease 3s;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .wrapper
@@ -17,14 +36,75 @@
     padding: 1.5em;
 }
 
+.inner-wrapper ul
+{
+    background-color: rgb(255, 229, 190);
+    padding: 1.5em;
+    list-style: none;
+    border-radius: 1em;
+}
+
+.color
+{
+    margin-left: 0.5em;
+    text-align: center;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    appearance: none;
+    width: 3em;
+    height: 3em;
+}
+
+.color::-webkit-color-swatch
+{
+    border-radius: 1em;
+    border: none;
+}
+
+.inner-wrapper li
+{
+    
+    margin: 1em;
+    display: flex;
+    align-items: center;
+}
+
+.inner-wrapper input
+{
+    margin-left: 1em;
+}
+
 .inner-wrapper h1
 {
     margin-bottom: 0.5em;
+    color: rgb(153, 49, 49);
+}
+
+.inner-wrapper button
+{
+    cursor: pointer;
+    margin-top: 1em;
+    border: none;
+    border-radius: 1em;
+    padding: 1em;
+    background-color: #c49783;
+    color: white;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.inner-wrapper button:hover
+{
+    background-color: rgb(114, 73, 65);
+    transition: 0.5s;
 }
 
 #canvas
 {
-    background-color: red;
+    background-color: rgb(255, 151, 151);
+    border-radius: 1em;
     flex: 0 0 30em;
     height: 35em;
     display: flex;
@@ -35,7 +115,9 @@
 .grid
 {
     
-    background-color: rgb(255, 255, 255);
+    background-color: none;
+    border: none;
+    border-radius: 5em;
     flex: 1 1 auto;
     width: 100%;
     display: grid;
@@ -45,15 +127,29 @@
 
 .item
 {
-    border: 1px solid rgb(0, 0, 0);
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: #ffffffcc;
 }
 
 footer
 {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: white;
     font-family: "Open Sans";
     padding: 3em;
     background-color: rgb(199, 134, 134);
+}
+
+a
+{
+    color: rgb(136, 85, 85);
+    margin-right: 1em;
+    font-size: 2em;
+    transition: 1s;
+}
+
+a:hover
+{
+    color: rgb(102, 32, 32);
 }

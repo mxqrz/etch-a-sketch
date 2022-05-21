@@ -1,14 +1,16 @@
 const grid = document.querySelector(".grid");
 const grid_size = document.querySelector("#grid-size")
-const color_selector = document.querySelector("#color");
+const color_selector = document.querySelector("#paint-color");
+const border_color_selector = document.querySelector("#border-color");
 const rainbow_toggle = document.querySelector("#rainbow");
 const size_text = document.querySelector("#size-output");
 const clear_grid = document.querySelector("#clear-grid");
 const grid_border = document.querySelector("#grid-border");
 
-let color = "black";
+let color = "#a6589e";
+let borderColor = "#f5d1d1";
 let rainbow = false;
-let borders = true;
+let borders = false;
 
 let genGrid = (size) =>
 {
@@ -34,17 +36,47 @@ let genGrid = (size) =>
             }
             grid.style.gridTemplateColumns = colX;
         }
+
+        updateBorders(size);
     }
 
     showBorders();
     checkHover();
 }
 
+let updateBorders = (size) =>
+{
+    let i = 1;
+    document.querySelectorAll(".item").forEach(item =>
+    {
+        if (i == 1)
+        {
+            item.style.borderTopLeftRadius = "1em";
+        }
+        else
+        if (i == size)
+        {
+            item.style.borderTopRightRadius = "1em";
+        }
+        else
+        if (i == Math.pow(size, 2) - size + 1)
+        {
+            item.style.borderBottomLeftRadius = "1em";
+        }
+        else
+        if (i == Math.pow(size, 2))
+        {
+            item.style.borderBottomRightRadius = "1em";
+        }
+        i++;
+    });
+}
+
 let clearGrid = () =>
 {
     document.querySelectorAll(".item").forEach(item =>
     {
-        item.style.backgroundColor = "white";
+        item.style.backgroundColor = "#ffffffcc";
     })
 }
 
@@ -54,7 +86,7 @@ let showBorders = () =>
     {
         document.querySelectorAll(".item").forEach(item => 
         {
-            item.style.border = "0.05em solid black";
+            item.style.border = `0.05em solid ${borderColor}`;
         })
     }
     else
@@ -85,22 +117,29 @@ let checkHover = () =>
 }
 
 checkHover();
+updateBorders(3);
 
 color_selector.addEventListener('input', function ()
 {
     color = color_selector.value;
 });
 
+border_color_selector.addEventListener('input', function () 
+{
+    borderColor = border_color_selector.value;
+    showBorders();
+});
+
 rainbow_toggle.addEventListener('change', function ()
 {
     rainbow = !rainbow;
-})
+});
 
 grid_border.addEventListener('change', function () 
 {
     borders = !borders;
     showBorders();
-})
+});
 
 grid_size.addEventListener('input', function ()
 {
@@ -111,4 +150,4 @@ grid_size.addEventListener('input', function ()
 clear_grid.addEventListener('click', function ()
 {
     clearGrid();
-})
+});

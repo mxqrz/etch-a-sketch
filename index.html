@@ -7,7 +7,9 @@
     <title>etch a sketch</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4c536a6bd5.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
@@ -15,9 +17,10 @@
     <div class="wrapper">
         <div class="inner-wrapper" id="settings">
             <ul>
-                <li>color: <input type="color" id="color"></li>
-                <li>rainbow: <input type="checkbox" id="rainbow"></li>
-                <li>show borders: <input type="checkbox" id="grid-border" value="js-checked" checked></li>
+                <li>color: <input type="color" value="#a6589e" class="color" id="paint-color"></li>
+                <li>border color: <input type="color" value="#f5d1d1" class="color" id="border-color"></li>
+                <li>rainbow: <input type="checkbox" class="checkbox" id="rainbow"></li>
+                <li>show borders: <input type="checkbox" class="checkbox" id="grid-border"></li>
                 <li>grid size: <input type="range"  min="1" max="10" id="grid-size"><span id="size-output"><strong>3x3</strong></span></span></li>
                 <li><button id="clear-grid">clear grid</button></lI>
             </ul>
@@ -37,7 +40,7 @@
             </div>
         </div>
     </div>
-    <footer>footer</footer>
+    <footer><a href="https://github.com/grimflame"><i class="fab fa-github"></i></a>grimflame</footer>
     <script src="main.js"></script>
 </body>
 </html>
