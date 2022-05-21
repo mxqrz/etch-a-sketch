@@ -1,0 +1,29 @@
+.wrapper
+{
+    display: flex;
+    padding: 10em;
+}
+
+.inner-wrapper
+{
+    flex: 1;
+    flex-wrap: wrap;
+}
+
+#canvas
+{
+    background-color: red;
+    flex: 0 0 40em;
+    height: 35em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid
+{
+    
+    background-color: rgb(255, 255, 255);
+    flex: 0 0 35em;
+    height: 20em;
+}
