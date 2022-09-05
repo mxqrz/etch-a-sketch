@@ -1,4 +1,4 @@
 # etch-a-sketch
-grimflame On Da Beat So Issa Banger
+Made from Odin Project
 <br>
 https://mxqrz.github.io/etch-a-sketch
